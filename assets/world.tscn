@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cu5bjtr6uiu1l"]
 
-[sub_resource type="TileSet" id="TileSet_hjl76"]
-
 [node name="World" type="Node2D" unique_id=720850796]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2030152591]
-tile_set = SubResource("TileSet_hjl76")
+[node name="Level" type="StaticBody2D" parent="." unique_id=1782163701]
+
+[node name="LevelSprite" type="Sprite2D" parent="Level" unique_id=1306457515]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level" unique_id=1273727649]
