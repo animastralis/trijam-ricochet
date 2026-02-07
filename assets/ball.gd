@@ -15,4 +15,3 @@ func boost() -> void:
 	var target := get_global_mouse_position()
 	var boost_direction := (target - global_position).normalized()
 	apply_central_impulse(boost_direction * boost_strength)
-	print("BALL ROT: " + str(rotation) + " | BALL: " + str(global_position) + " | MOUSE: " + str(target))
