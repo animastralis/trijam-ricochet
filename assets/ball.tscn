@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bgwc2ccbrq1iw"]
+[gd_scene format=3 uid="uid://5i0vpfe0ibe3"]
 
 [ext_resource type="Texture2D" uid="uid://dcm54awbim4gu" path="res://assets/Ball.png" id="1_8kf32"]
-[ext_resource type="Script" uid="uid://o74mruit6hk2" path="res://assets/ball.gd" id="1_f8axv"]
+[ext_resource type="Script" path="res://assets/ball.gd" id="1_f8axv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8kf32"]
 bounce = 1.0
@@ -9,8 +9,185 @@ bounce = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_8kf32"]
 radius = 32.0
 
+[sub_resource type="Animation" id="Animation_f8axv"]
+resource_name = "Ball_Up_Down_Squish"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.546875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 14.5)]
+}
+
+[sub_resource type="Animation" id="Animation_l30l0"]
+resource_name = "Ball_Left_Squish"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.546875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 14.5)]
+}
+
+[sub_resource type="Animation" id="Animation_l2l23"]
+resource_name = "Ball_Right_Squish"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.546875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 14.5)]
+}
+
+[sub_resource type="Animation" id="Animation_6qfka"]
+resource_name = "Ball_Up_Squish"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.546875)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 14.5)]
+}
+
+[sub_resource type="Animation" id="Animation_w4qwd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wsu4s"]
+_data = {
+&"Ball_Down_Squish": SubResource("Animation_f8axv"),
+&"Ball_Left_Squish": SubResource("Animation_l30l0"),
+&"Ball_Right_Squish": SubResource("Animation_l2l23"),
+&"Ball_Up_Squish": SubResource("Animation_6qfka"),
+&"RESET": SubResource("Animation_w4qwd")
+}
+
 [node name="Ball" type="RigidBody2D" unique_id=1954331888]
 physics_material_override = SubResource("PhysicsMaterial_8kf32")
+lock_rotation = true
 script = ExtResource("1_f8axv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1880896522]
@@ -18,3 +195,6 @@ texture = ExtResource("1_8kf32")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1680462489]
 shape = SubResource("CircleShape2D_8kf32")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1825227115]
+libraries/ = SubResource("AnimationLibrary_wsu4s")
