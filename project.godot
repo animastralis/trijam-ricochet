@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="trijam-ricochet"
-run/main_scene="uid://dyfgoh3uyhqyn"
+run/main_scene="uid://bp6mym4wyg5r8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

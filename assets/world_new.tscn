@@ -12,18 +12,20 @@
 
 [node name="SpinnerTwo" parent="Level" unique_id=906326520 instance=ExtResource("3_xolv8")]
 position = Vector2(717, 457)
-rotation = 1.5707964
+starting_rotation = 90
 
 [node name="SpinnerTwo2" parent="Level" unique_id=1195528985 instance=ExtResource("3_xolv8")]
 position = Vector2(1021, 268)
-rotation = 1.5707964
+starting_rotation = 60
 
 [node name="SpinnerTwo3" parent="Level" unique_id=1248206846 instance=ExtResource("3_xolv8")]
 position = Vector2(1498, 519)
-rotation = 1.5707964
+starting_rotation = 225
+metadata/_edit_group_ = true
 
 [node name="SpinnerFour" parent="Level" unique_id=2088671688 instance=ExtResource("3_31uk1")]
 position = Vector2(1909, 394)
+starting_rotation = 30
 
 [node name="Ball" parent="." unique_id=1954331888 instance=ExtResource("3_rhl8q")]
 position = Vector2(239, 298)
