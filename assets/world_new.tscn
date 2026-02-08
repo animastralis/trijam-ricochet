@@ -1,12 +1,24 @@
-[gd_scene format=3 uid="uid://bp6mym4wyg5r8"]
+[gd_scene format=3 uid="uid://dkd5ehelvg80e"]
 
-[ext_resource type="PackedScene" uid="uid://dncgapbmtdf67" path="res://assets/level.tscn" id="1_46wd2"]
+[ext_resource type="PackedScene" path="res://assets/level.tscn" id="1_46wd2"]
 [ext_resource type="Script" uid="uid://oe8fetmi614e" path="res://assets/main_camera.gd" id="2_yuw8b"]
 [ext_resource type="PackedScene" uid="uid://h4vfbq1dyy35" path="res://assets/spinner_four.tscn" id="3_31uk1"]
 [ext_resource type="PackedScene" uid="uid://5i0vpfe0ibe3" path="res://assets/ball.tscn" id="3_rhl8q"]
 [ext_resource type="PackedScene" uid="uid://bv3b3t5yav3v5" path="res://assets/spinner_two.tscn" id="3_xolv8"]
+[ext_resource type="Texture2D" uid="uid://wauoa26q2qcu" path="res://assets/Finish_Line.png" id="4_pirbh"]
+[ext_resource type="Texture2D" uid="uid://b4f5usnyy4xbj" path="res://assets/lvl_01_terrain.png" id="5_viggf"]
 [ext_resource type="Texture2D" uid="uid://cwop2500wsm5t" path="res://assets/sand-clock.png" id="6_kc3uv"]
 [ext_resource type="Script" uid="uid://bwwivyjm31u33" path="res://assets/elapsed_time.gd" id="7_4pkt0"]
+
+[sub_resource type="Gradient" id="Gradient_askby"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.060240984, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.42365062, 0.42365065, 0.42365062, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t34u2"]
+gradient = SubResource("Gradient_askby")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pkt0"]
 bg_color = Color(1, 1, 1, 1)
@@ -19,6 +31,13 @@ border_color = Color(0.033853274, 0.03385329, 0.033853233, 1)
 [node name="WorldNew" type="Node2D" unique_id=707432781]
 
 [node name="Level" parent="." unique_id=266923489 instance=ExtResource("1_46wd2")]
+
+[node name="Background_Gradient" type="Sprite2D" parent="Level" unique_id=957895330]
+
+[node name="TextureRect" type="TextureRect" parent="Level/Background_Gradient" unique_id=1319974025]
+offset_right = 7680.0
+offset_bottom = 768.0
+texture = SubResource("GradientTexture2D_t34u2")
 
 [node name="SpinnerTwo" parent="Level" unique_id=906326520 instance=ExtResource("3_xolv8")]
 position = Vector2(717, 457)
@@ -35,6 +54,14 @@ starting_rotation = 225
 [node name="SpinnerFour" parent="Level" unique_id=2088671688 instance=ExtResource("3_31uk1")]
 position = Vector2(1909, 394)
 starting_rotation = 30
+
+[node name="FinishLine" type="Sprite2D" parent="Level" unique_id=883567278]
+position = Vector2(7648, 384)
+texture = ExtResource("4_pirbh")
+
+[node name="Lvl01Terrain" type="Sprite2D" parent="Level" unique_id=484204702]
+position = Vector2(3840, 384)
+texture = ExtResource("5_viggf")
 
 [node name="Ball" parent="." unique_id=1954331888 instance=ExtResource("3_rhl8q")]
 position = Vector2(239, 298)
