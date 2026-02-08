@@ -3,6 +3,9 @@ extends RigidBody2D
 
 @export var boost_strength := 1000.0
 
+@onready var particles := $Pivot/CPUParticles2D
+@onready var pivot := $Pivot
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -25,7 +28,11 @@ func boost() -> void:
 	var target := get_global_mouse_position()
 	var boost_direction := (target - global_position).normalized()
 	apply_central_impulse(boost_direction * boost_strength)
+	pivot.rotation = -boost_direction.angle()
+	particles.emitting = true
 
 
 func boost_dir(direction: Vector2) -> void:
 	apply_central_impulse(direction * boost_strength)
+	pivot.rotation = -direction.angle()
+	particles.emitting = true

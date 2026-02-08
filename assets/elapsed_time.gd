@@ -8,7 +8,6 @@ func _process(delta: float) -> void:
 	elapsed_time += delta
 	var minutes: int = elapsed_time / 60
 	var seconds: int = int(elapsed_time) % 60
-	print(seconds)
 	var seconds_str: String
 	if seconds < 10:
 		seconds_str = "0" + str(seconds)
