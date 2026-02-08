@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dccuijrpe3jnk" path="res://assets/lvl_01.png" id="1_l27oy"]
 [ext_resource type="PackedScene" uid="uid://5i0vpfe0ibe3" path="res://assets/ball.tscn" id="2_ddhnk"]
-[ext_resource type="Script" uid="uid://oe8fetmi614e" path="res://assets/main_camera.gd" id="3_qx6fs"]
+[ext_resource type="Script" path="res://assets/main_camera.gd" id="3_qx6fs"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ddhnk"]
 friction = 0.5
@@ -14,7 +14,7 @@ size = Vector2(90, 785)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qx6fs"]
 size = Vector2(113, 788.5)
 
-[node name="World" type="Node2D" unique_id=720850796]
+[node name="World2" type="Node2D" unique_id=720850796]
 
 [node name="Level" type="StaticBody2D" parent="." unique_id=1782163701]
 physics_material_override = SubResource("PhysicsMaterial_ddhnk")
@@ -38,7 +38,6 @@ position = Vector2(7735.5, 389.75)
 shape = SubResource("RectangleShape2D_qx6fs")
 
 [node name="Ball" parent="." unique_id=1954331888 instance=ExtResource("2_ddhnk")]
-position = Vector2(432, 571)
 lock_rotation = false
 boost_strength = 500.0
 
