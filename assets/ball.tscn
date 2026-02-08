@@ -162,12 +162,6 @@ _data = {
 &"RESET": SubResource("Animation_w4qwd")
 }
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l30l0"]
-
-[sub_resource type="Curve" id="Curve_l2l23"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l2l23"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6qfka"]
@@ -201,31 +195,6 @@ shape = SubResource("CircleShape2D_8kf32")
 libraries/ = SubResource("AnimationLibrary_wsu4s")
 
 [node name="Pivot" type="Node2D" parent="." unique_id=1385810798]
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Pivot" unique_id=796261613]
-visible = false
-material = SubResource("CanvasItemMaterial_l30l0")
-position = Vector2(57.000008, 0)
-scale = Vector2(1.015, 1.015)
-emitting = false
-amount = 32
-texture = ExtResource("3_l30l0")
-lifetime = 0.61
-one_shot = true
-preprocess = 0.67
-explosiveness = 0.13
-draw_order = 1
-emission_shape = 1
-emission_sphere_radius = 32.0
-spread = 4.64
-gravity = Vector2(0, 0)
-initial_velocity_min = 20.0
-initial_velocity_max = 353.81
-linear_accel_max = 20.65
-scale_amount_min = 0.1
-scale_amount_curve = SubResource("Curve_l2l23")
-color = Color(0.06879827, 0.06879828, 0.06879828, 1)
-anim_speed_max = 5.78
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Pivot" unique_id=1436552971]
 material = SubResource("CanvasItemMaterial_l2l23")
