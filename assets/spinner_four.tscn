@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://h4vfbq1dyy35"]
+
+[ext_resource type="Texture2D" uid="uid://byiqm4kkmi3nb" path="res://assets/4_spinner.png" id="1_1ewtb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5hou"]
+friction = 0.21
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5hou"]
+size = Vector2(259, 19)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n1rsp"]
+friction = 0.21
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1rsp"]
+radius = 32.0
+
+[node name="SpinnerFour" type="Node2D" unique_id=906326520]
+
+[node name="Spinner" type="RigidBody2D" parent="." unique_id=1997880017]
+mass = 2.5
+physics_material_override = SubResource("PhysicsMaterial_d5hou")
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Spinner" unique_id=569632317]
+texture = ExtResource("1_1ewtb")
+offset = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spinner" unique_id=1727885930]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_d5hou")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Spinner" unique_id=1306371889]
+position = Vector2(0.5, 1.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_d5hou")
+
+[node name="SpinnerBase" type="StaticBody2D" parent="." unique_id=22354732]
+physics_material_override = SubResource("PhysicsMaterial_n1rsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpinnerBase" unique_id=2011135885]
+position = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_n1rsp")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=865319182]
+node_a = NodePath("../Spinner")
+node_b = NodePath("../SpinnerBase")

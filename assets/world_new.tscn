@@ -2,15 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://dncgapbmtdf67" path="res://assets/level.tscn" id="1_46wd2"]
 [ext_resource type="Script" uid="uid://oe8fetmi614e" path="res://assets/main_camera.gd" id="2_yuw8b"]
+[ext_resource type="PackedScene" uid="uid://h4vfbq1dyy35" path="res://assets/spinner_four.tscn" id="3_31uk1"]
 [ext_resource type="PackedScene" uid="uid://5i0vpfe0ibe3" path="res://assets/ball.tscn" id="3_rhl8q"]
+[ext_resource type="PackedScene" uid="uid://bv3b3t5yav3v5" path="res://assets/spinner_two.tscn" id="3_xolv8"]
 
 [node name="WorldNew" type="Node2D" unique_id=707432781]
 
 [node name="Level" parent="." unique_id=266923489 instance=ExtResource("1_46wd2")]
 
+[node name="SpinnerTwo" parent="Level" unique_id=906326520 instance=ExtResource("3_xolv8")]
+position = Vector2(717, 457)
+rotation = 1.5707964
+
+[node name="SpinnerTwo2" parent="Level" unique_id=1195528985 instance=ExtResource("3_xolv8")]
+position = Vector2(1021, 268)
+rotation = 1.5707964
+
+[node name="SpinnerTwo3" parent="Level" unique_id=1248206846 instance=ExtResource("3_xolv8")]
+position = Vector2(1498, 519)
+rotation = 1.5707964
+
+[node name="SpinnerFour" parent="Level" unique_id=2088671688 instance=ExtResource("3_31uk1")]
+position = Vector2(1909, 394)
+
 [node name="Ball" parent="." unique_id=1954331888 instance=ExtResource("3_rhl8q")]
 position = Vector2(239, 298)
-boost_strength = 2000.0
+boost_strength = 1300.0
 
 [node name="MainCamera" type="Camera2D" parent="." unique_id=496208871 node_paths=PackedStringArray("ball")]
 limit_left = 0
