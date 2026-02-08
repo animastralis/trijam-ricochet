@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bp6mym4wyg5r8"]
+
+[ext_resource type="PackedScene" uid="uid://dncgapbmtdf67" path="res://assets/level.tscn" id="1_46wd2"]
+[ext_resource type="Script" uid="uid://oe8fetmi614e" path="res://assets/main_camera.gd" id="2_yuw8b"]
+[ext_resource type="PackedScene" uid="uid://5i0vpfe0ibe3" path="res://assets/ball.tscn" id="3_rhl8q"]
+
+[node name="WorldNew" type="Node2D" unique_id=707432781]
+
+[node name="Level" parent="." unique_id=266923489 instance=ExtResource("1_46wd2")]
+
+[node name="Ball" parent="." unique_id=1954331888 instance=ExtResource("3_rhl8q")]
+position = Vector2(239, 298)
+boost_strength = 2000.0
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=496208871 node_paths=PackedStringArray("ball")]
+limit_left = 0
+limit_top = 768
+limit_right = 7680
+limit_bottom = 0
+script = ExtResource("2_yuw8b")
+ball = NodePath("../Ball")
