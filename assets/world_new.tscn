@@ -43,8 +43,39 @@ texture = SubResource("GradientTexture2D_t34u2")
 position = Vector2(717, 457)
 starting_rotation = -45
 
+[node name="SpinnerTwo7" parent="Level" unique_id=626800365 instance=ExtResource("3_xolv8")]
+position = Vector2(5640, 381)
+starting_rotation = -90
+
+[node name="SpinnerTwo8" parent="Level" unique_id=1011205650 instance=ExtResource("3_xolv8")]
+position = Vector2(5992, 232)
+starting_rotation = 200
+
+[node name="SpinnerTwo10" parent="Level" unique_id=912738076 instance=ExtResource("3_xolv8")]
+position = Vector2(6728, 224)
+starting_rotation = -10
+
+[node name="SpinnerTwo11" parent="Level" unique_id=155662901 instance=ExtResource("3_xolv8")]
+position = Vector2(6728, 522)
+starting_rotation = 15
+
+[node name="SpinnerTwo9" parent="Level" unique_id=1996497207 instance=ExtResource("3_xolv8")]
+position = Vector2(5984, 522)
+starting_rotation = 30
+
 [node name="SpinnerTwo2" parent="Level" unique_id=1195528985 instance=ExtResource("3_xolv8")]
 position = Vector2(1021, 268)
+starting_rotation = 60
+
+[node name="SpinnerTwo4" parent="Level" unique_id=795403564 instance=ExtResource("3_xolv8")]
+position = Vector2(2824, 400)
+starting_rotation = 90
+
+[node name="SpinnerTwo5" parent="Level" unique_id=480290250 instance=ExtResource("3_xolv8")]
+position = Vector2(4208, 200)
+
+[node name="SpinnerTwo6" parent="Level" unique_id=870111527 instance=ExtResource("3_xolv8")]
+position = Vector2(4552, 456)
 starting_rotation = 60
 
 [node name="SpinnerTwo3" parent="Level" unique_id=1248206846 instance=ExtResource("3_xolv8")]
@@ -53,6 +84,26 @@ starting_rotation = 225
 
 [node name="SpinnerFour" parent="Level" unique_id=2088671688 instance=ExtResource("3_31uk1")]
 position = Vector2(1909, 394)
+starting_rotation = 30
+
+[node name="SpinnerFour2" parent="Level" unique_id=348315070 instance=ExtResource("3_31uk1")]
+position = Vector2(2416, 504)
+starting_rotation = 45
+
+[node name="SpinnerFour3" parent="Level" unique_id=31406885 instance=ExtResource("3_31uk1")]
+position = Vector2(3224, 288)
+starting_rotation = 45
+
+[node name="SpinnerFour4" parent="Level" unique_id=54732439 instance=ExtResource("3_31uk1")]
+position = Vector2(3728, 472)
+starting_rotation = 45
+
+[node name="SpinnerFour5" parent="Level" unique_id=1030551647 instance=ExtResource("3_31uk1")]
+position = Vector2(5072, 273)
+starting_rotation = -45
+
+[node name="SpinnerFour6" parent="Level" unique_id=1863621406 instance=ExtResource("3_31uk1")]
+position = Vector2(5168, 544)
 starting_rotation = 30
 
 [node name="FinishLine" type="Sprite2D" parent="Level" unique_id=883567278]

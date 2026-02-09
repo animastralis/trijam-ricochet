@@ -164,6 +164,13 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l2l23"]
 
+[sub_resource type="CurveTexture" id="CurveTexture_l30l0"]
+
+[sub_resource type="Gradient" id="Gradient_l2l23"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6qfka"]
+gradient = SubResource("Gradient_l2l23")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6qfka"]
 particle_flag_disable_z = true
 emission_shape = 1
@@ -179,6 +186,8 @@ radial_accel_max = -2.2351742e-06
 tangential_accel_min = -2.2351742e-06
 tangential_accel_max = -2.2351742e-06
 scale_min = 0.39999998
+color_ramp = SubResource("GradientTexture1D_6qfka")
+alpha_curve = SubResource("CurveTexture_l30l0")
 
 [node name="Ball" type="RigidBody2D" unique_id=1954331888]
 physics_material_override = SubResource("PhysicsMaterial_8kf32")
@@ -204,4 +213,5 @@ amount = 16
 texture = ExtResource("3_l30l0")
 lifetime = 0.33
 one_shot = true
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_6qfka")

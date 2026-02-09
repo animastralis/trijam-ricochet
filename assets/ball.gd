@@ -3,7 +3,7 @@ extends RigidBody2D
 
 @export var boost_strength := 1000.0
 
-@onready var particles := $Pivot/CPUParticles2D
+@onready var particles := $Pivot/GPUParticles2D
 @onready var pivot := $Pivot
 
 
