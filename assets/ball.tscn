@@ -199,7 +199,9 @@ libraries/ = SubResource("AnimationLibrary_wsu4s")
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Pivot" unique_id=1436552971]
 material = SubResource("CanvasItemMaterial_l2l23")
 position = Vector2(0.175, 63.78)
+emitting = false
 amount = 16
 texture = ExtResource("3_l30l0")
 lifetime = 0.33
+one_shot = true
 process_material = SubResource("ParticleProcessMaterial_6qfka")
